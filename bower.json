@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "0",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -11,5 +11,9 @@
     "tests"
   ],
   "dependencies": {
+    "twitter": "~3.1.1",
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "nginfinitescroll": "~1.1.1"
   }
 }

@@ -1,6 +1,49 @@
 <!doctype html>
 <html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bower_components/twitter/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./bower_components/twitter/dist/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="./index.css" />
+</head>
 <body>
-	<script></script>
+	<section ng-app="app">
+		<!-- navigation -->
+	    <div class="blog-masthead">
+	      <div class="container">
+	        <nav class="blog-nav">
+	          <a class="blog-nav-item active" href="#">Home</a>
+	          <a class="blog-nav-item" href="#">Resume</a>
+	          <a class="blog-nav-item" href="#">About</a>
+	        </nav>
+	      </div>
+	    </div>
+    <!-- navigation -->
+    <!-- content -->
+	    <div class="container">
+	    	<!-- banner -->
+		      <div class="blog-header">
+		        <h1 class="blog-title">Braun's Web Blog</h1>
+		        <p class="lead blog-description">He developed this thing himself. It's true, he does it all the time.</p>
+		      </div>
+	      <!-- banner -->
+				<div data-ng-view></div>
+	    </div>
+    <!-- content -->
+    <!-- footer -->
+	    <div class="blog-footer">
+	      <p>Blog developed by Braun. with the help of git, node, mongodb, npm, bower, jquery, twitter, angular, express, and amazon.</p>
+	      <p>
+	        <a href="#">Back to top</a>
+	      </p>
+	    </div>
+    <!-- footer -->
+	</section>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/twitter/dist/js/bootstrap.min.js"></script>
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./bower_components/angular-route/angular-route.js"></script>
+	<script src="./bower_components/nginfinitescroll/build/ng-infinite-scroll.min.js"></script>
+	<script src="./index.js"></script>
 </body>
 </html>
