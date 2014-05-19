@@ -25,7 +25,7 @@ function BlogFactory ($http) {
 	var f = function () {
 		this.posts = [];
 		this.busy = false;
-		this.after = 'ok';
+		this.after = '';
 	}
 	f.prototype.nextPost = function () {
 		if (this.busy) {
@@ -33,8 +33,7 @@ function BlogFactory ($http) {
 		} else {
 			this.busy = true;
 			var url = 'http://api.braunswebblog.com/posts?after='+this.after;
-			$http
-				.get({method:'GET',url:url})
+			$http({method:'GET',url:url})
 				.success(function(data){
 					var posts = data.posts;
 					for (var p in posts) {
@@ -45,6 +44,7 @@ function BlogFactory ($http) {
 				}.bind(this))
 				.error(function(e){
 					console.log(e);
+					this.busy = false;
 				});
 		}
 	}
